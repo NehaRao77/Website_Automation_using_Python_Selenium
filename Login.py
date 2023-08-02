@@ -13,14 +13,14 @@ import HtmlTestRunner
 class LoginTest(unittest.TestCase):
     #unit testing functions
 
-    #setup function
+    #setup_function
     @classmethod
     def setUpClass(cls):
         cls.driver = webdriver.Chrome(executable_path= "C:\\chromedriver.exe")
         cls.driver.implicitly_wait(10)
         cls.driver.maximize_window()
 
-    #test function
+    #test_function
     def test_login_valid(self):
         driver = self.driver
         driver.get("https://opensource-demo.orangehrmlive.com/")
@@ -35,7 +35,7 @@ class LoginTest(unittest.TestCase):
 
         time.sleep(4)
 
-    #teardown function
+    #teardown_function
     @classmethod
     def tearDownClass(cls):
         cls.driver.close()
